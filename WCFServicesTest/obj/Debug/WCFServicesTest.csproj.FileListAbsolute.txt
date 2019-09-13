@@ -1,0 +1,10 @@
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\ApplicationInsights.config
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\WCFServicesTest.dll
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\WCFServicesTest.pdb
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\WcfServicios.dll
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\WcfServicios.pdb
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\obj\Debug\WCFServicesTest.csprojResolveAssemblyReference.cache
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\obj\Debug\WCFServicesTest.dll
+C:\Users\jdani\Documents\UPC\WcfDanielZapata\WCFServicesTest\obj\Debug\WCFServicesTest.pdb
