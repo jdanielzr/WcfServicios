@@ -10,7 +10,6 @@ namespace WcfServicios.Persistencia
     public class PaymentDAO
     {
         private string CadenaConexion = "Data Source=DESKTOP-EJM18E6;Initial Catalog=Restaurant;User ID=sa;Password=12345";
-
         public Payment Crear(Payment PaymentACrear)
         {
             Int32 newId;
@@ -126,7 +125,6 @@ namespace WcfServicios.Persistencia
             PaymentModificado = Obtener(PaymentAModificar.id);
             return PaymentModificado;
         }
-
         public void Eliminar(int id)
         {
             string sql = "DELETE FROM payment WHERE id = @id";

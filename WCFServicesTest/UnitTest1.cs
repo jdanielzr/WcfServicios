@@ -19,7 +19,7 @@ namespace WCFServicesTest
             Payment paymentACrear = new Payment()
             { amount = 1000,
                  merchant_message_culqui ="",
-                order_id = 5,
+                order_id = 13,
                 payment_date = "2019-01-01",
                 response_code_culqui ="",
                 status = 0,
@@ -41,7 +41,7 @@ namespace WCFServicesTest
             Payment paymentCreado = js.Deserialize<Payment>(tramaJson);
             Assert.AreEqual( 1000, paymentCreado.amount);
             Assert.AreEqual("", paymentCreado.merchant_message_culqui);
-            Assert.AreEqual(5, paymentCreado.order_id);
+            Assert.AreEqual(13, paymentCreado.order_id);
             DateTime fecha = DateTime.Parse(paymentCreado.payment_date.ToString());
              Debug.Write(fecha.ToString("yyyy-MM-dd"));
             Assert.AreEqual("2019-01-01", fecha.ToString("yyyy-MM-dd"));
@@ -105,7 +105,7 @@ namespace WCFServicesTest
         public void Test3Obtener()
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.
-                Create("http://localhost:2153/Payments.svc/Payments/10");
+                Create("http://localhost:2153/Payments.svc/Payments/12");
             request.Method = "GET";
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
@@ -114,14 +114,14 @@ namespace WCFServicesTest
             Payment paymentObtenido = js.Deserialize<Payment>(tramaJson);
              Assert.AreEqual(1000, paymentObtenido.amount);
             Assert.AreEqual("", paymentObtenido.merchant_message_culqui);
-            Assert.AreEqual(5, paymentObtenido.order_id);
+            Assert.AreEqual(12, paymentObtenido.order_id);
             DateTime fecha = DateTime.Parse(paymentObtenido.payment_date.ToString());
             Debug.Write(fecha.ToString("yyyy-MM-dd"));
             Assert.AreEqual("2019-01-01", fecha.ToString("yyyy-MM-dd"));
             Assert.AreEqual("", paymentObtenido.response_code_culqui);
             Assert.AreEqual(0, paymentObtenido.status);
             Assert.AreEqual("", paymentObtenido.status_culqui);
-            Assert.AreEqual(10, paymentObtenido.id);
+           // Assert.AreEqual(13, paymentObtenido.id);
 
         }
 
@@ -134,12 +134,12 @@ namespace WCFServicesTest
             {
                 amount = 1500,
                 merchant_message_culqui = "Pago registrado",
-                order_id = 5,
+                order_id = 11,
                 payment_date = "2019-01-01",
                 response_code_culqui = "Adhvgaq837t128",
                 status = 0,
                 status_culqui = "Paid",
-                id=10
+                id=11
             };
             string postdata = js.Serialize(paymentAModificar);
             byte[] data = Encoding.UTF8.GetBytes(postdata);
@@ -156,14 +156,14 @@ namespace WCFServicesTest
             Payment paymentActualizado = js.Deserialize<Payment>(tramaJson);
             Assert.AreEqual(1500, paymentActualizado.amount);
             Assert.AreEqual("Pago registrado", paymentActualizado.merchant_message_culqui);
-            Assert.AreEqual(5, paymentActualizado.order_id);
+            Assert.AreEqual(11, paymentActualizado.order_id);
             DateTime fecha = DateTime.Parse(paymentActualizado.payment_date.ToString());
             Debug.Write(fecha.ToString("yyyy-MM-dd"));
             Assert.AreEqual("2019-01-01", fecha.ToString("yyyy-MM-dd"));
             Assert.AreEqual("Adhvgaq837t128", paymentActualizado.response_code_culqui);
             Assert.AreEqual(0, paymentActualizado.status);
             Assert.AreEqual("Paid", paymentActualizado.status_culqui);
-            Assert.AreEqual(10, paymentActualizado.id);
+            Assert.AreEqual(11 ,paymentActualizado.id);
         }
 
 
@@ -199,7 +199,7 @@ namespace WCFServicesTest
             string tramaJson = reader.ReadToEnd();
             JavaScriptSerializer js = new JavaScriptSerializer();
             List<Payment> paymentsObtenidos = js.Deserialize<List<Payment>>(tramaJson);
-            Assert.AreEqual(1, paymentsObtenidos.Count);
+            Assert.AreEqual(4, paymentsObtenidos.Count);
         }
     }
 }
